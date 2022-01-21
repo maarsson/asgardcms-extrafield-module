@@ -1,0 +1,18 @@
+{
+    "name": "Extrafield",
+    "alias": "extrafield",
+    "description": "",
+    "keywords": [],
+    "version": "1.0.0",
+    "active": 1,
+    "order": 1,
+    "providers": [
+        "Modules\\Extrafield\\Providers\\EventServiceProvider",
+        "Modules\\Extrafield\\Providers\\ExtrafieldServiceProvider",
+        "Modules\\Extrafield\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+    ],
+    "requires": []
+}
