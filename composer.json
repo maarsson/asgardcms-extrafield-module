@@ -1,6 +1,6 @@
 {
-    "name": "maarsson/extrafield",
-    "description": "",
+    "name": "maarsson/asgardcms-extrafield",
+    "description": "An extension for the block module for AsgardCMS",
     "type": "asgard-module",
     "license": "MIT",
     "require": {
@@ -22,8 +22,8 @@
     "prefer-stable": true,
     "authors": [
         {
-            "name": "Nicolas Widart",
-            "email": "n.widart@gmail.com"
+            "name": "VMaarsson",
+            "email": "viktor@maarsson.se"
         }
     ],
     "extra": {
