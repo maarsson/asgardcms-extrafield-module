@@ -4,12 +4,13 @@ namespace Modules\Extrafield\Providers;
 
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
-use Modules\Extrafield\Facades\ExtrafieldFacade;
 use Modules\Core\Events\BuildingSidebar;
 use Modules\Core\Events\LoadingBackendTranslations;
 use Modules\Core\Traits\CanPublishConfiguration;
 use Modules\Extrafield\Composers\ExtrafieldComposer;
+use Modules\Extrafield\Console\PublishThemeExtrafieldsCommand;
 use Modules\Extrafield\Events\Handlers\RegisterExtrafieldSidebar;
+use Modules\Extrafield\Facades\ExtrafieldFacade;
 
 class ExtrafieldServiceProvider extends ServiceProvider
 {
@@ -30,6 +31,7 @@ class ExtrafieldServiceProvider extends ServiceProvider
     {
         $this->registerBindings();
         $this->registerFacade();
+        $this->registerCommands();
 
         $this->app['events']->listen(BuildingSidebar::class, RegisterExtrafieldSidebar::class);
 
@@ -81,5 +83,15 @@ class ExtrafieldServiceProvider extends ServiceProvider
     {
         $aliasLoader = AliasLoader::getInstance();
         $aliasLoader->alias('Extrafield', ExtrafieldFacade::class);
+    }
+
+    /**
+     * Register the console commands
+     */
+    private function registerCommands()
+    {
+        $this->commands([
+            PublishThemeExtrafieldsCommand::class,
+        ]);
     }
 }
