@@ -1,5 +1,5 @@
 {
-    "name": "maarsson/asgardcms-extrafield",
+    "name": "maarsson/extrafield",
     "description": "An extension for the block module for AsgardCMS",
     "type": "asgard-module",
     "license": "MIT",
