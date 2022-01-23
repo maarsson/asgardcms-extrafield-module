@@ -1,6 +1,6 @@
 {
     "name": "maarsson/extrafield",
-    "description": "An extension for the block module for AsgardCMS",
+    "description": "AsgardCMS module: Add custom fields to blocks",
     "type": "asgard-module",
     "license": "MIT",
     "require": {
